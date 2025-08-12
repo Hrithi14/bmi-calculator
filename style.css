@@ -105,12 +105,8 @@ h1 {
   display: none;
 }
 
-/* Responsive Design */
-@media (max-width: 400px) {
-  h1 {
-    font-size: 20px;
-  }
-  .calc-btn {
-    padding: 8px;
-  }
+
+h1 {
+  font-size: clamp(20px, 5vw, 40px);
 }
+

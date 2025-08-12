@@ -1,15 +1,10 @@
 let gender = "Female";
 
-document.getElementById("maleBtn").addEventListener("click", function() {
-  gender = "Male";
-  this.classList.add("active");
-  document.getElementById("femaleBtn").classList.remove("active");
+document.getElementById("male").addEventListener("change", function() {
+    if (this.checked) document.getElementById("female").checked = false;
 });
-
-document.getElementById("femaleBtn").addEventListener("click", function() {
-  gender = "Female";
-  this.classList.add("active");
-  document.getElementById("maleBtn").classList.remove("active");
+document.getElementById("female").addEventListener("change", function() {
+    if (this.checked) document.getElementById("male").checked = false;
 });
 
 document.getElementById("calcBtn").addEventListener("click", function() {
