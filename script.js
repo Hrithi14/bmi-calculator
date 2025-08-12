@@ -20,7 +20,7 @@ document.getElementById("calcBtn").addEventListener("click", function() {
   if(age && weight && height) {
     let bmi = (weight / ((height / 100) ** 2)).toFixed(1);
 
-    // Determine BMI status
+
     let status = "";
     if(bmi < 16) status = "Very severely underweight";
     else if(bmi < 18.5) status = "Underweight";
@@ -28,7 +28,7 @@ document.getElementById("calcBtn").addEventListener("click", function() {
     else if(bmi < 30) status = "Overweight";
     else status = "Obese";
 
-    // Show result
+   
     document.getElementById("bmiValue").textContent = `BMI: ${bmi}`;
     document.getElementById("bmiStatus").textContent = `${status} (${gender})`;
     document.getElementById("resAge").textContent = age;
@@ -40,3 +40,4 @@ document.getElementById("calcBtn").addEventListener("click", function() {
     alert("Please fill in all fields.");
   }
 });
+
