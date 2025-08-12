@@ -1,11 +1,12 @@
-let gender = "Female";
-
+let gender = "Unknown";
 document.getElementById("male").addEventListener("change", function() {
-    if (this.checked) document.getElementById("female").checked = false;
+  if (this.checked) gender = "Male";
 });
 document.getElementById("female").addEventListener("change", function() {
-    if (this.checked) document.getElementById("male").checked = false;
+  if (this.checked) gender = "Female";
 });
+
+
 
 document.getElementById("calcBtn").addEventListener("click", function() {
   let age = document.getElementById("age").value;
